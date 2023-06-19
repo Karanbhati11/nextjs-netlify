@@ -9,7 +9,7 @@ import HomePage from '@/components/HomePage'
 export default function Home() {
   return (
    <div>
-    <div className={styles.NavbarContainer}><Navbar/></div>
+    <div ><Navbar/></div>
       <div id='home' className={styles.HomeContainer}><HomePage/></div>
       <div id='about' className={styles.AboutContainer}> <About/></div>
       <div id='work' className={styles.WorkContainer}><Work/></div>

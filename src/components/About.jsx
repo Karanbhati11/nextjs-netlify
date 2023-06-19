@@ -1,8 +1,8 @@
 import styles from '../app/page.module.css'
-
 const About = () => {
   return (
-    <div className={styles.AboutParallax}></div>
+    <div className={styles.AboutParallax}>
+    </div>
   )
 }
 

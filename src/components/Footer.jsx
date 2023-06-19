@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <div></div>
+    <div> ©2023 NovaCorporation, Inc. All rights reserved</div>
   )
 }
 

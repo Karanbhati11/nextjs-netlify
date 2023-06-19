@@ -29,7 +29,7 @@ h2 {
   position: -webkit-sticky; /* Safari */
   position: fixed;
   top: 0;
-  background-color: #253237;
+  background-color: #ffffff;
 }
 
 /* NAVIGATION */
@@ -43,8 +43,8 @@ h2 {
 }
 
 .navbar img {
-  height: 16px;
-  width: auto;
+  height: 75px;
+  width: 95px;
   justify-self: start;
   margin-left: 20px;
 }
@@ -57,7 +57,7 @@ h2 {
 }
 
 .nav-item a {
-  color: #ffffff;
+  color: #000000;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;

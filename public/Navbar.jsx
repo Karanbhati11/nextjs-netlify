@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import "./navbar.css";
+import Logo from '../assets/logo/nova-logos.jpeg'
 const Navbar = () => {
   const [active, setActive] = useState("");
 
@@ -17,7 +18,7 @@ const Navbar = () => {
       <div className="nav-wrapper">
         <nav className="navbar">
           <img
-            src="/nova-logos_transparent.png"
+            src="../assets/logo/nova-logos_transparent.png"
             alt="Company Logo"
           />
           <div
