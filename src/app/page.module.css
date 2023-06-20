@@ -57,6 +57,8 @@
 }
 .VideoContainer::before{
   content: '';
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   background: rgba(37, 50, 55, 0.4);
   border-radius: 5px;
