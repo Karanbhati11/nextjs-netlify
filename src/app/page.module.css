@@ -1,37 +1,128 @@
 /* @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono); */
-
+/* HomePage Starts---------------------------------------------------------- */
 .HomeContainer {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   /* background-color: #9ad5ca; */
 }
 
-.myElementt {
+.HomeSubSubHeading{
   color: whitesmoke;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 400;
   text-transform: uppercase;
-  font-family: 'Share Tech Mono', monospace;
+  margin-top: 5px;
+  font-family: "Share Tech Mono", monospace;
 }
+.Typewriter{
+  color: wheat;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 5px;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.HomeSubHeading{
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #deeaee;
+  text-transform: uppercase;
+  text-align: center;
+ 
+}
+.HomeHeading{
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  border: 2px solid whitesmoke;
+}
+.ParallaxVideo {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -999;
+  opacity: 1;
+}
+.VideoContainer::before{
+  content: '';
+  position: absolute;
+  background: rgba(37, 50, 55, 0.4);
+  border-radius: 5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+/* HomePage ends---------------------------------------------------------- */
+
+/* AboutPage Starts---------------------------------------------------------- */
 
 .AboutContainer {
   height: 100vh;
   width: 100%;
   /* background-color: #9ad5ca; */
 }
+.AboutParallax {
+  /* background-image: url("../assets//mountains.svg"); */
+  background-color: aquamarine;
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* AboutPage ends---------------------------------------------------------- */
+/* WorkPage Starts---------------------------------------------------------- */
+
 .WorkContainer {
   height: 100vh;
   width: 100%;
   /* background-color: #9ad5ca; */
 }
+
+.WorkParallax {
+  /* background-image: url("../assets//sunset-1373171.jpg"); */
+  background-color: bisque;
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* WorkPage ends---------------------------------------------------------- */
+/* ContactPage Starts---------------------------------------------------------- */
+
 .ContactContainer {
   height: 100vh;
   width: 100%;
   /* background-color: #9ad5ca; */
 }
+.ContactParallax {
+  /* background-image: url("../assets//nature-3194001.jpg"); */
+  background-color: cadetblue;
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ContactPage ends---------------------------------------------------------- */
+/* Footer Starts---------------------------------------------------------- */
 
 .FooterContainer {
   height: 75px;
@@ -44,43 +135,24 @@
   color: whitesmoke;
   font-size: 0.9rem;
 }
+/* Footer ends---------------------------------------------------------- */
 
-.ParallaxVideo {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -999;
-}
 
-.AboutParallax {
-  /* background-image: url("../assets//mountains.svg"); */
-  background-color: aquamarine;
-  min-height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.WorkParallax {
-  /* background-image: url("../assets//sunset-1373171.jpg"); */
-  background-color: bisque;
-  min-height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.ContactParallax {
-  /* background-image: url("../assets//nature-3194001.jpg"); */
-  background-color: cadetblue;
-  min-height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+@media only screen and (max-width: 720px) {
+
+
+  .HomeSubSubHeading{
+    font-size: 0.9rem;
+  }
+  .Typewriter{
+    font-size: 0.9rem;
+  }
+  .HomeSubHeading{
+    font-size: 1rem;
+  }
+  .HomeHeading{
+    font-size: 2rem;
+  }
+
 }

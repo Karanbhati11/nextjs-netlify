@@ -1,19 +1,32 @@
-'use client'
-import { useEffect } from "react";
+"use client";
 import styles from "../app/page.module.css";
-import { init } from "ityped";
-const TypingText = () => {
-  useEffect(() => {
-    const myElement = document.querySelector(".myElement");
-    init(myElement, {
-      cursorChar: "|",
-      typeSpeed: 100,
-      showCursor: true,
-      strings: ["typingtext 1", "typingtext 2", "typingtext 3"],
-    });
-  }, []);
+import Typewriter from "typewriter-effect";
 
-  return <div className={`myElement ${styles.myElementt}`}></div>;
+const TypingText = () => {
+  return (
+    <>
+      <div className={styles.HomeSubHeading}>We dont create websites, we create dreams</div>
+      <div
+        
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "flex-end",
+        }}
+      >
+        <text className={styles.HomeSubSubHeading}> we are&nbsp;</text>  
+        <Typewriter
+          options={{
+            strings: ["Designers","developers","creators"],
+            autoStart: true,
+            loop: true,
+            wrapperClassName: styles.Typewriter,
+          }}
+        />
+      </div>
+    </>
+  );
 };
 
 export default TypingText;
