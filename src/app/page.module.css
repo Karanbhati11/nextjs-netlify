@@ -1,6 +1,7 @@
 /* @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono); */
 /* HomePage Starts---------------------------------------------------------- */
 .HomeContainer {
+  
   height: 100vh;
   width: 100%;
   display: flex;
@@ -10,7 +11,7 @@
   /* background-color: #9ad5ca; */
 }
 
-.HomeSubSubHeading{
+.HomeSubSubHeading {
   color: whitesmoke;
   font-size: 1rem;
   font-weight: 400;
@@ -18,7 +19,7 @@
   margin-top: 5px;
   font-family: "Share Tech Mono", monospace;
 }
-.Typewriter{
+.Typewriter {
   color: wheat;
   font-size: 1rem;
   font-weight: 400;
@@ -27,15 +28,14 @@
   font-family: "Share Tech Mono", monospace;
 }
 
-.HomeSubHeading{
+.HomeSubHeading {
   font-size: 1.3rem;
   font-weight: 600;
   color: #deeaee;
   text-transform: uppercase;
   text-align: center;
- 
 }
-.HomeHeading{
+.HomeHeading {
   font-size: 2.3rem;
   font-weight: 600;
   color: #ffffff;
@@ -55,9 +55,9 @@
   z-index: -999;
   opacity: 1;
 }
-.VideoContainer::before{
-  content: '';
-  width: 100vw;
+.VideoContainer::before {
+  content: "";
+  width: 100%;
   height: 100vh;
   position: absolute;
   background: rgba(37, 50, 55, 0.4);
@@ -73,19 +73,98 @@
 /* AboutPage Starts---------------------------------------------------------- */
 
 .AboutContainer {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
-  /* background-color: #9ad5ca; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .AboutParallax {
-  /* background-image: url("../assets//mountains.svg"); */
-  background-color: aquamarine;
-  min-height: 100%;
+  background-image: url("../assets//sunset-1373171.jpg");
+  /* background-color: rgb(84, 165, 138); */
+  width: 100%;
+  height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: -9;
 }
+
+.AboutContentContainer {
+  position: absolute;
+  height: 80vh;
+  width: calc(80vw);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.box1 {
+  flex: 1;
+  background-color: #deeaee;
+  height: 100%;
+  width: 100%;
+  border: #253237;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.AboutText {
+  flex: 0.6;
+  background-color: #253237;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+  color: #deeaee;
+  text-align: center;
+  /* width: 500px; */
+}
+
+.AboutHeading {
+  font-size: 2rem;
+  color: whitesmoke;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.AboutCard{
+  height: 85%;
+  width: 80%;
+  background-color: bisque;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.AboutSubText {
+  font-size: 1rem;
+  /* margin-top: 20px; */
+  padding: 20px;
+  font-weight: 400;
+  text-align: justify;
+  color: #253237;
+}
+.AboutContent {
+  flex: 0.4;
+  background-color: black;
+  height: 100%;
+}
+.AboutCanvas{
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
 /* AboutPage ends---------------------------------------------------------- */
 /* WorkPage Starts---------------------------------------------------------- */
 
@@ -139,22 +218,26 @@
 }
 /* Footer ends---------------------------------------------------------- */
 
-
-
 @media only screen and (max-width: 720px) {
-
-
-  .HomeSubSubHeading{
+  .HomeSubSubHeading {
     font-size: 0.9rem;
   }
-  .Typewriter{
+  .Typewriter {
     font-size: 0.9rem;
   }
-  .HomeSubHeading{
+  .HomeSubHeading {
     font-size: 1rem;
   }
-  .HomeHeading{
+  .HomeHeading {
     font-size: 2rem;
   }
-
+  .box1 {
+    flex-direction: column;
+  }
+  .AboutHeading {
+    font-size: 1.3rem;
+  }
+  .AboutSubText {
+    font-size: 0.8rem;
+  }
 }
