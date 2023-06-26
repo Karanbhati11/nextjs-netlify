@@ -13,9 +13,7 @@ const Work = () => {
   const cubeRef = useRef();
   const tl = useRef();
   const CanvasRef = useRef();
-  const { nodes, materials } = useLoader(GLTFLoader,"./cube.glb");
-  const [count, setCount] = useState(0);
-
+  const { nodes, materials } = useLoader(GLTFLoader, "./cube.glb");
   const [radius, setRadius] = useState(1.3);
   var width = window.innerWidth;
 
