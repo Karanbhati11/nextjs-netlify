@@ -1,17 +1,19 @@
 "use client";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import styles from "../app/page.module.css";
 import { OrbitControls, useGLTF } from "@react-three/drei";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+
 // import { useFrame } from "@react-three/fiber";
 import { gsap } from "gsap";
 // import { Model as Cube } from "./Cube";
 // import { OrbitControls } from "@react-three/drei";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 const Work = () => {
   const cubeRef = useRef();
   const tl = useRef();
   const CanvasRef = useRef();
-  const { nodes, materials } = useGLTF("./cube.glb");
+  const { nodes, materials } = useLoader(GLTFLoader,"./cube.glb");
   const [count, setCount] = useState(0);
 
   const [radius, setRadius] = useState(1.3);
