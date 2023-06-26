@@ -11,7 +11,7 @@ const Work = () => {
   const cubeRef = useRef();
   const tl = useRef();
   const CanvasRef = useRef();
-  const { nodes, materials } = useGLTF("/cube.glb");
+  const { nodes, materials } = useGLTF("./cube.glb");
   const [count, setCount] = useState(0);
 
   const [radius, setRadius] = useState(1.3);
