@@ -1,5 +1,5 @@
 import styles from "../app/page.module.css";
-import CanvasComponent from "./CanvasComponent";
+// import CanvasComponent from "./CanvasComponent";
 
 const About = () => {
   return (
@@ -10,14 +10,12 @@ const About = () => {
             <text className={styles.AboutHeading}>About</text>
             <div className={styles.AboutCard}>
               <text className={styles.AboutSubText}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                totam eius tempore facere voluptas, dolorum voluptates dolor
-                nisi neque numquam beatae architecto facilis non quasi fugit
-                accusamus a magni modi!
+               {/* About Text Here */}
               </text>
             </div>
           </div>
-           <CanvasComponent/>
+          {/* Canvas here  */}
+          {/* <CanvasComponent/> */}
         </div>
       </div>
       <div className={styles.AboutParallax}></div>
