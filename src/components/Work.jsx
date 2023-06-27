@@ -1,54 +1,64 @@
 "use client";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import styles from "../app/page.module.css";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { OrbitControls, useGLTF, useScroll } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-
-// import { useFrame } from "@react-three/fiber";
 import { gsap } from "gsap";
-// import { Model as Cube } from "./Cube";
-// import { OrbitControls } from "@react-three/drei";
-import { useEffect, useRef, useState } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+gsap.registerPlugin(ScrollTrigger);
 const Work = () => {
   const cubeRef = useRef();
   const tl = useRef();
   const CanvasRef = useRef();
-  const { nodes, materials } = useLoader(GLTFLoader, "./cube.glb");
-  const [radius, setRadius] = useState(1.3);
-  var width = window.innerWidth;
 
-  // useEffect(() => {
-  //   if (width < 710) {
-  //     setRadius(0.8);
-  //   }
-  // }, []);
+  const [radius, setRadius] = useState(1.5);
+  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      tl.current = gsap.to(
-        cubeRef?.current?.rotation,
-        {
-          scrollTrigger: cubeRef.current?.rotation,
-          y: "+=1.4",
-        },
-        cubeRef
-      );
-    });
-  }, [tl]);
-
-  const Dragger = () => {
-    console.log(cubeRef);
-    const ctx = gsap.context(() => {
-      tl.current = gsap.timeline().to(
-        cubeRef.current.rotation,
-        {
-          scrollTrigger: cubeRef.current.rotation,
-          y: "+=1.4",
-        },
-        cubeRef
-      );
-    });
+  const MyCube = () => {
+    const { nodes, materials } = useLoader(GLTFLoader, "/cube.glb");
+    return (
+      <group scale={radius} position={[0, 0, 0]} dispose={null} ref={cubeRef}>
+        <mesh
+          geometry={nodes.Cube_1.geometry}
+          material={materials["Image ONE"]}
+        />
+        <mesh
+          geometry={nodes.Cube_2.geometry}
+          material={materials["Image TWO"]}
+        />
+        <mesh
+          geometry={nodes.Cube_3.geometry}
+          material={materials["Image THREE"]}
+        />
+        <mesh
+          geometry={nodes.Cube_4.geometry}
+          material={materials["Image FOUR"]}
+        />
+        <mesh
+          geometry={nodes.Cube_5.geometry}
+          material={materials["Image FIVE"]}
+        />
+        <mesh
+          geometry={nodes.Cube_6.geometry}
+          material={materials["Image SIX"]}
+        />
+      </group>
+    );
   };
+
+
+  function RotatingCube () {
+    gsap.to(cubeRef.current?.rotation, {
+      y: "+=1.1",
+    });
+  }
+  useLayoutEffect(() => {
+    window.addEventListener("scroll",RotatingCube );
+    return () => {
+      window.removeEventListener('scroll', RotatingCube);
+  };
+  }, []);
 
   return (
     <>
@@ -150,43 +160,22 @@ const Work = () => {
               consequuntur modi ab assumenda, minus, facilis, obcaecati odio
               fuga?
             </p>
+            <button
+              onClick={() => {
+                setCount(() => {
+                  count + 1;
+                });
+              }}
+            >
+              INCREMENT : {count}
+            </button>
           </div>
         </div>
         <div className={styles.imgBx}>
           <Canvas className={styles.CanvasImg} ref={CanvasRef}>
             <ambientLight intensity={1} />
-            <group
-              scale={radius}
-              position={[0, 0, 0]}
-              dispose={null}
-              ref={cubeRef}
-            >
-              <mesh
-                geometry={nodes.Cube_1.geometry}
-                material={materials["Image ONE"]}
-              />
-              <mesh
-                geometry={nodes.Cube_2.geometry}
-                material={materials["Image TWO"]}
-              />
-              <mesh
-                geometry={nodes.Cube_3.geometry}
-                material={materials["Image THREE"]}
-              />
-              <mesh
-                geometry={nodes.Cube_4.geometry}
-                material={materials["Image FOUR"]}
-              />
-              <mesh
-                geometry={nodes.Cube_5.geometry}
-                material={materials["Image FIVE"]}
-              />
-              <mesh
-                geometry={nodes.Cube_6.geometry}
-                material={materials["Image SIX"]}
-              />
-            </group>
-            <OrbitControls enableZoom={false} autoRotate />
+            <MyCube />
+            {/* <OrbitControls enableZoom={false} autoRotate /> */}
           </Canvas>
         </div>
       </section>
