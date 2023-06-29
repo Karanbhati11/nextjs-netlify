@@ -172,7 +172,7 @@
   height: 320vh;
   width: 100%;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   flex-direction: column;
   /* overflow: auto; */
   /* align-items: center; */
@@ -180,7 +180,7 @@
 
   /* background-color: #9ad5ca; */
 }
-.imgBx{
+.imgBx {
   position: sticky;
   top: 0;
   min-width: 50%;
@@ -188,30 +188,30 @@
   background-color: #deeaee;
 }
 
-.CanvasImg{
+.CanvasImg {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   max-width: 600px;
 }
-.WorkContentContainer{
+.WorkContentContainer {
   display: flex;
   flex-direction: column;
   margin-top: 40vh;
 }
-.WorkContentOne{
+.WorkContentOne {
   padding: 100px 0 100px 100px;
   text-align: justify;
   background-color: cadetblue;
   height: 100%;
 }
-.WorkContentTwo{
+.WorkContentTwo {
   padding: 100px 0 100px 100px;
   text-align: justify;
   background-color: rgb(46, 155, 54);
 }
-.WorkContentThree{
+.WorkContentThree {
   padding: 100px 0 100px 100px;
   text-align: justify;
   background-color: rgb(147, 70, 70);
@@ -226,7 +226,7 @@
   background-size: cover;
 }
 
-.WorkSection{
+.WorkSection {
   position: relative;
   height: 320vh;
   background-color: #deeaee;
@@ -268,7 +268,6 @@
   left: 45vw;
   position: absolute;
 }
-
 
 /* WorkPage ends---------------------------------------------------------- */
 /* ContactPage Starts---------------------------------------------------------- */
@@ -333,4 +332,56 @@
   }
 
   /* AboutPage Ends */
+
+  /* Work Section starts*/
+  .WorkContainer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* overflow: auto; */
+    /* align-items: center; */
+    background-color: #deeaee;
+  
+    /* background-color: #9ad5ca; */
+  }
+  .WorkSection {
+    position: relative;
+    height: 100vh;
+    background-color: #deeaee;
+    display: flex;
+  }
+  .imgBx {
+    display: block;
+    height: 100vh;
+  }
+  .WorkContentContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    flex-wrap: wrap;
+    display: none;
+  }
+
+  .WorkContentOne {
+    text-align: center;
+    padding: 20px;
+    display: none;
+  }
+  .WorkContentTwo {
+    text-align: center;
+    padding: 20px;
+    display: none;
+
+  }
+  .WorkContentThree {
+    text-align: center;
+    padding: 20px;
+    display: none;
+
+  }
+
+  /* Work Section Ends */
 }

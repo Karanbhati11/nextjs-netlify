@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef, useState } from "react";
 gsap.registerPlugin(ScrollTrigger);
 const Work = () => {
-  const [radius, setRadius] = useState(1.5);
+  const [radius, setRadius] = useState(0.5);
   const MyCube = () => {
     const cubeRef = useRef(null);
     const tl = useRef();
@@ -21,40 +21,49 @@ const Work = () => {
           endTrigger: "#ContactPage",
           end: "top top",
           scrub: 2,
-          markers: true,
+          // markers: true,
         },
       });
-      tl.current.to(cubeRef.current?.rotation, { y: "+=1.55" },3);
-      tl.current.to(cubeRef.current?.rotation, { y: "+=1.6" },6 );
-      tl.current.to(cubeRef.current?.rotation, { y: "+=2" },10);
+      tl.current.to(
+        cubeRef.current?.scale,
+        { x: "1.5", y: "1.5", z: "1.5" },
+        0.1
+      );
+      
+      tl.current.to(cubeRef.current?.position, { x: "0", y: "0", z: "0" }, 0.1);
+      tl.current.to(cubeRef.current?.rotation, { y: "+=1.55" }, 3);
+      tl.current.to(cubeRef.current?.rotation, { y: "+=1.6" }, 6);
+      tl.current.to(cubeRef.current?.rotation, { y: "+=2" }, 10);
     }, []);
     return (
-      <group scale={radius} position={[0, 0, 0]} dispose={null} ref={cubeRef}>
-        <mesh
-          geometry={nodes.Cube_1.geometry}
-          material={materials["Image ONE"]}
-        />
-        <mesh
-          geometry={nodes.Cube_2.geometry}
-          material={materials["Image TWO"]}
-        />
-        <mesh
-          geometry={nodes.Cube_3.geometry}
-          material={materials["Image THREE"]}
-        />
-        <mesh
-          geometry={nodes.Cube_4.geometry}
-          material={materials["Image FOUR"]}
-        />
-        <mesh
-          geometry={nodes.Cube_5.geometry}
-          material={materials["Image FIVE"]}
-        />
-        <mesh
-          geometry={nodes.Cube_6.geometry}
-          material={materials["Image SIX"]}
-        />
-      </group>
+      <>
+        <group scale={radius} position={[0, 2.5, 0]} dispose={null} ref={cubeRef}>
+          <mesh
+            geometry={nodes.Cube_1.geometry}
+            material={materials["Image ONE"]}
+          />
+          <mesh
+            geometry={nodes.Cube_2.geometry}
+            material={materials["Image TWO"]}
+          />
+          <mesh
+            geometry={nodes.Cube_3.geometry}
+            material={materials["Image THREE"]}
+          />
+          <mesh
+            geometry={nodes.Cube_4.geometry}
+            material={materials["Image FOUR"]}
+          />
+          <mesh
+            geometry={nodes.Cube_5.geometry}
+            material={materials["Image FIVE"]}
+          />
+          <mesh
+            geometry={nodes.Cube_6.geometry}
+            material={materials["Image SIX"]}
+          />
+        </group>
+      </>
     );
   };
 
@@ -160,7 +169,6 @@ const Work = () => {
         <Canvas className={styles.CanvasImg}>
           <ambientLight intensity={1} />
           <MyCube />
-          {/* <OrbitControls enableZoom={false} autoRotate /> */}
         </Canvas>
       </div>
     </section>
