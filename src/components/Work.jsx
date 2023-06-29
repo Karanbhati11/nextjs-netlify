@@ -26,7 +26,7 @@ const Work = () => {
       });
       tl.current.to(
         cubeRef.current?.scale,
-        { x: "1.5", y: "1.5", z: "1.5" },
+        { x: "1.8", y: "1.8", z: "1.8" },
         0.1
       );
       
@@ -41,26 +41,44 @@ const Work = () => {
           <mesh
             geometry={nodes.Cube_1.geometry}
             material={materials["Image ONE"]}
+            onClick={()=>{
+              console.log("ONE")
+            }}
           />
           <mesh
             geometry={nodes.Cube_2.geometry}
             material={materials["Image TWO"]}
+            onClick={()=>{
+              console.log("TWO")
+            }}
           />
           <mesh
             geometry={nodes.Cube_3.geometry}
             material={materials["Image THREE"]}
+            onClick={()=>{
+              console.log("THREE")
+            }}
           />
           <mesh
             geometry={nodes.Cube_4.geometry}
             material={materials["Image FOUR"]}
+            onClick={()=>{
+              console.log("FOUR")
+            }}
           />
           <mesh
             geometry={nodes.Cube_5.geometry}
             material={materials["Image FIVE"]}
+            onClick={()=>{
+              console.log("FIVE")
+            }}
           />
           <mesh
             geometry={nodes.Cube_6.geometry}
             material={materials["Image SIX"]}
+            onClick={()=>{
+              console.log("SIX")
+            }}
           />
         </group>
       </>

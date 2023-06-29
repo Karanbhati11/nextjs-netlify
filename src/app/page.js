@@ -10,11 +10,13 @@ export default function Home() {
   return (
    <div>
     <div ><Navbar/></div>
+    <div className={styles.AllPages}>
       <div id='home' className={styles.HomeContainer}><HomePage/></div>
       <div id='about' className={styles.AboutContainer}> <About/></div>
       <div id='work' className={styles.WorkContainer}><Work/></div>
       <div id='contact' className={styles.ContactContainer}><Contact/></div>
       <div className={styles.FooterContainer}><Footer/></div>
+      </div>
    </div>
   )
 }

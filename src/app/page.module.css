@@ -1,4 +1,11 @@
 /* @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono); */
+
+/* GLOBAL CSS start*/
+.AllPages{
+  scroll-snap-type: y proximity;
+}
+/* GLOBAL CSS END */
+
 /* HomePage Starts---------------------------------------------------------- */
 .HomeContainer {
   height: 100vh;
@@ -7,6 +14,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  scroll-snap-align:start ;
   /* background-color: #9ad5ca; */
 }
 
@@ -74,10 +82,12 @@
 .AboutContainer {
   height: 100vh;
   width: 100%;
+  scroll-snap-align:start ;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  top: 0;
 }
 .AboutParallax {
   background-image: url("../assets//sunset-1373171.jpg");
@@ -171,6 +181,7 @@
   position: relative;
   height: 320vh;
   width: 100%;
+  scroll-snap-align:start ;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -199,22 +210,29 @@
   display: flex;
   flex-direction: column;
   margin-top: 40vh;
+  /* height: 100vh; */
+  scroll-snap-type: y proximity;
 }
 .WorkContentOne {
   padding: 100px 0 100px 100px;
   text-align: justify;
   background-color: cadetblue;
   height: 100%;
+  scroll-snap-align: start;
 }
 .WorkContentTwo {
   padding: 100px 0 100px 100px;
   text-align: justify;
   background-color: rgb(46, 155, 54);
+  scroll-snap-align: start;
+
 }
 .WorkContentThree {
   padding: 100px 0 100px 100px;
   text-align: justify;
   background-color: rgb(147, 70, 70);
+  scroll-snap-align: start;
+
 }
 .WorkParallax {
   /* background-image: url("../assets//sunset-1373171.jpg"); */
@@ -275,6 +293,8 @@
 .ContactContainer {
   height: 100vh;
   width: 100%;
+  scroll-snap-align:start ;
+
   /* background-color: #9ad5ca; */
 }
 .ContactParallax {
